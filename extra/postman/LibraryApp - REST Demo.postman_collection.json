@@ -1,0 +1,140 @@
+{
+	"info": {
+		"_postman_id": "69340e5d-9fc9-4f01-9e7b-c6e0d7d54fbc",
+		"name": "LibraryApp - REST Demo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28728664"
+	},
+	"item": [
+		{
+			"name": "1. Scenario Dettaglio Libro",
+			"item": [
+				{
+					"name": "1.1 Get Book Details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/books/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"books",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "1.2 Get Book Authors",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/books/1/authors",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"books",
+								"1",
+								"authors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "1.3 Get Book Reviews",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/books/1/reviews",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"books",
+								"1",
+								"reviews"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "1.4 Get Book OverFetch",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/books/1/complete",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"books",
+								"1",
+								"complete"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "2. Scenario Creazione Review",
+			"item": [
+				{
+					"name": "2.1 Add review",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"bookId\": 1,\n    \"userId\": 2,\n    \"rating\": 7,\n    \"comment\": \"Si legge molto volentieri\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/reviews",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"reviews"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "2.2 Get book stats",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/books/1/stats",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"books",
+								"1",
+								"stats"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
